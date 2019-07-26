@@ -1,0 +1,52 @@
+{% extends "main.html" %}
+{% block content %}
+{# =========================================================================================================================================================== #}
+
+
+
+<table class="table table-striped table-dark">
+    <tr>
+        <th>VehicleCode</th>
+        <th>BrandMobil</th>
+        <th>ModelMobil</th>
+        <th>TipeMobil</th>
+        <th>TahunMobil</th>
+        <th>KategoriMobil</th>
+        <th>GradeMobil</th>
+        <th>MesinMobile</th>
+        <th>Area</th>
+    </tr>
+    {% for raw in data %}
+     <tr>
+         <td>{{raw.VehicleCode}}</td>
+         <td>{{raw.BrandMobil}}</td>
+         <td>{{raw.ModelMobil}}</td>
+         <td>{{raw.TipeMobil}}</td>
+         <td>{{raw.TahunMobil}}</td>
+         <td>{{raw.KategoriMobil}}</td>
+         <td>{{raw.GradeMobil}}</td>
+         <td>{{raw.MesinMobile}}</td>
+         <td>{{raw.Area}}</td>
+     </tr>
+     {% endfor %}
+ </table>
+
+ <nav aria-label="Page navigation example">
+     <ul class="pagination">
+         <li class="page-item">
+             <a class="page-link  bg-dark" href="?pages={{page - 1}}" aria-label="Previous">
+                 <span aria-hidden="true">&laquo;</span>
+                 <span class="sr-only">Previous</span>
+             </a>
+         </li>
+         <li class="page-item">
+             <a class="page-link  bg-dark" href="?pages={{page + 1}}" aria-label="Next">
+                 <span aria-hidden="true">&raquo;</span>
+                 <span class="sr-only">Next</span>
+             </a>
+         </li>
+     </ul>
+ </nav>
+
+{# =========================================================================================================================================================== #}
+{% endblock content %}

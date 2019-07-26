@@ -1,0 +1,4 @@
+go/.env
+py/__pycache__
+route/__pycache__
+py/env
